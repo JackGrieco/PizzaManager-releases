@@ -36,12 +36,27 @@ jobs:
           set -eu
           git config user.name  'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          # `diff --quiet` esce 1 quando c'è una differenza: senza questo
-          # controllo ogni giro farebbe un commit vuoto, ogni ora, per sempre.
-          if git diff --quiet -- feedback.json; then
-            echo "Nessuna differenza: niente commit."
-            exit 0
-          fi
-          git add feedback.json
-          git commit -m "feedback.json aggiornato dalle issue"
-          git push
+          # Due eventi ravvicinati (issue aperta + etichettata) fanno partire
+          # due giri che si contendono il push: il secondo viene rifiutato.
+          # Si riprova prendendo il remoto e RIGENERANDO il file: è prodotto da
+          # zero dalle issue, quindi non c'è niente da fondere.
+          for tentativo in 1 2 3; do
+            # `diff --quiet` esce 1 quando c'è una differenza: senza questo
+            # controllo ogni giro farebbe un commit vuoto, ogni ora, per sempre.
+            if git diff --quiet -- feedback.json; then
+              echo "Nessuna differenza: niente commit."
+              exit 0
+            fi
+            git add feedback.json
+            git commit -m "feedback.json aggiornato dalle issue"
+            if git push; then exit 0; fi
+            echo "Push rifiutato (tentativo $tentativo): riprendo il remoto e rigenero."
+            git fetch origin main
+            git reset --hard origin/main
+            node .github/feedback.js
+          done
+          echo "::error::tre push rifiutati di fila"
+          exit 1
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
