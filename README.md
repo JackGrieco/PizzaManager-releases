@@ -22,6 +22,7 @@
   <img src="https://img.shields.io/badge/macOS%20%C2%B7%20Linux-black" alt="macOS e Linux">
   <img src="https://img.shields.io/badge/firmata%20e%20notarizzata-brightgreen" alt="Firmata e notarizzata per macOS">
   <img src="https://img.shields.io/badge/Electron-33-47848F?logo=electron&logoColor=white" alt="Electron 33">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/licenza-proprietaria-lightgrey" alt="Software proprietario"></a>
 </p>
 
 <p align="center">
@@ -110,3 +111,16 @@ L'app fa una sola richiesta di rete per conto suo — i font, e offline usa quel
 **Una sessione tmux resta appesa.** `tmux -L aisession ls` per vederle, `tmux -L aisession kill-session -t <nome>` per chiuderne una. Mai `kill-server` senza `-L aisession`: colpiresti le tue sessioni personali.
 
 **Il banner dell'aggiornamento non compare.** Il primo controllo è 10 secondi dopo l'avvio e poi ogni 4 ore: se hai appena aperto l'app, aspetta un attimo. Con il `.deb` non comparirà mai in forma automatica, per scelta.
+
+## Licenza
+
+PizzaManager è software **proprietario**: si può installare e usare
+liberamente, su quanti computer vuoi, senza costi e senza registrazione. Non
+si può ridistribuire né modificare. Il testo completo è in
+[`LICENSE`](LICENSE).
+
+I componenti di terze parti che l'app impacchetta — tutti con licenze
+permissive — sono elencati con le rispettive licenze in
+[`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md).
+
+Copyright © 2026 Giacomo Grieco e Alessandro Cadei.
