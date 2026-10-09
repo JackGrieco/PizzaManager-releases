@@ -1,4 +1,15 @@
 {
-  "generato": "2026-10-09T10:44:38.015Z",
-  "voci": []
+  "generato": "2026-10-09T10:46:09.941Z",
+  "voci": [
+    {
+      "numero": 1,
+      "titolo": "[Prova] verifica della bacheca",
+      "autore": "JackGrieco",
+      "voti": 0,
+      "stato": "in-corso",
+      "tipo": "richiesta",
+      "url": "https://github.com/JackGrieco/PizzaManager-releases/issues/1",
+      "creata": "2026-10-09T10:46:01Z"
+    }
+  ]
 }
