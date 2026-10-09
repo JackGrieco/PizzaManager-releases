@@ -29,6 +29,16 @@ async function api(percorso) {
   return res.json();
 }
 
+/*
+ * Le etichette di questo repo sono il vocabolario dell'app: `bug` ed
+ * `enhancement` decidono il tipo, `stato:*` il badge. Un'etichetta che l'app
+ * non conosce qui passa, ma lì non si vede, e la richiesta resta una riga
+ * aperta che continua a raccogliere voti anche dopo che è stata decisa. Per
+ * questo le etichette predefinite di GitHub (wontfix, duplicate, question…)
+ * sono state tolte: gli stati veri stanno in STATI, in
+ * lib/feedback-source.js nel repo del codice.
+ */
+
 /** `stato:in-corso` → `in-corso`. Senza etichetta: 'aperta'. */
 function statoDa(labels) {
   const nomi = (labels || []).map((l) => (typeof l === 'string' ? l : l.name));
