@@ -1,4 +1,15 @@
 {
-  "generato": "2026-10-09T10:48:20.364Z",
-  "voci": []
+  "generato": "2026-10-09T13:00:46.620Z",
+  "voci": [
+    {
+      "numero": 2,
+      "titolo": "Problema 123",
+      "autore": "JackGrieco",
+      "voti": 0,
+      "stato": "aperta",
+      "tipo": "richiesta",
+      "url": "https://github.com/JackGrieco/PizzaManager-releases/issues/2",
+      "creata": "2026-10-09T13:00:35Z"
+    }
+  ]
 }
