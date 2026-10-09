@@ -2,13 +2,16 @@ name: Richiesta di funzionalità
 description: Proponi qualcosa che vorresti in PizzaManager
 title: "[Richiesta] "
 labels: ["enhancement"]
+# Gli id dei campi sono anche i nomi con cui l'app precompila il modulo
+# (lib/feedback-source.js). Nessuno può chiamarsi `body`: è un nome riservato
+# di GitHub e su un modulo .yml viene buttato via in silenzio.
 body:
   - type: markdown
     attributes:
       value: |
         Grazie! Le richieste più votate (👍 su questa pagina) le guardiamo prima.
   - type: textarea
-    id: body
+    id: descrizione
     attributes:
       label: Cosa vorresti
       description: Cosa dovrebbe fare, e in quale momento ti servirebbe.
@@ -20,5 +23,13 @@ body:
     attributes:
       label: Come fai adesso
       description: Se c'è un modo per cavartela oggi, raccontalo — aiuta a capire quanto pesa.
+    validations:
+      required: false
+  - type: input
+    id: ambiente
+    attributes:
+      label: Versione e sistema
+      description: Si compila da sé se apri la richiesta dal pannello 📣 Segnalazioni dentro l'app.
+      placeholder: PizzaManager 1.5.0 · macOS · con tmux
     validations:
       required: false
