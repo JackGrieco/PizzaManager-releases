@@ -117,6 +117,16 @@ L'app fa una sola richiesta di rete per conto suo — i font, e offline usa quel
 
 **Il banner dell'aggiornamento non compare.** Il primo controllo è 10 secondi dopo l'avvio e poi ogni 4 ore: se hai appena aperto l'app, aspetta un attimo. Con il `.deb` non comparirà mai in forma automatica, per scelta.
 
+## Segnalazioni e richieste
+
+Problemi e proposte si scrivono qui: [Segnalazioni](../../issues). Le più
+votate (👍 sulla issue) le guardiamo prima, e quando una entra in lavorazione
+prende l'etichetta *In corso*.
+
+Dentro l'app c'è lo stesso elenco, nel pannello **📣 Segnalazioni** in fondo a
+destra: si vede cosa stiamo facendo e si apre una segnalazione con versione e
+sistema già compilati.
+
 ## Licenza
 
 PizzaManager è software **proprietario**: si può installare e usare

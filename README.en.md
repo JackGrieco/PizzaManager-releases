@@ -156,6 +156,16 @@ without `-L aisession`: you'd take down your own personal sessions.
 startup and then every 4 hours: if you just opened the app, give it a moment.
 With the `.deb` it will never appear in automatic form, by design.
 
+## Feedback and requests
+
+Problems and ideas go here: [Issues](../../issues). The most upvoted ones (👍
+on the issue) get looked at first, and when something is being worked on it
+gets the *In corso* label.
+
+The app carries the same list in the **📣 Segnalazioni** panel, bottom right:
+you can see what we're working on and file a report with your version and
+system already filled in.
+
 ## License
 
 PizzaManager is **proprietary** software: you may install and use it freely, on

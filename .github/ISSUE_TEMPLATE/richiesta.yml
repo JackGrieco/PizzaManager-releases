@@ -1,0 +1,24 @@
+name: Richiesta di funzionalità
+description: Proponi qualcosa che vorresti in PizzaManager
+title: "[Richiesta] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie! Le richieste più votate (👍 su questa pagina) le guardiamo prima.
+  - type: textarea
+    id: body
+    attributes:
+      label: Cosa vorresti
+      description: Cosa dovrebbe fare, e in quale momento ti servirebbe.
+      placeholder: Quando apro una sessione su un progetto grosso vorrei…
+    validations:
+      required: true
+  - type: textarea
+    id: oggi
+    attributes:
+      label: Come fai adesso
+      description: Se c'è un modo per cavartela oggi, raccontalo — aiuta a capire quanto pesa.
+    validations:
+      required: false
