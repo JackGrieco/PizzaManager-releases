@@ -1,4 +1,9 @@
 <p align="center">
+  <b>🇮🇹 Italiano</b> ·
+  <a href="README.en.md">🇬🇧 English</a>
+</p>
+
+<p align="center">
   <img src="assets/logo.png" width="128" alt="Logo di PizzaManager: una pizza con una fetta sollevata">
 </p>
 
