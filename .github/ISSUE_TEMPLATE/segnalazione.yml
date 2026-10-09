@@ -2,6 +2,9 @@ name: Problema
 description: Qualcosa non funziona come dovrebbe
 title: "[Problema] "
 labels: ["bug"]
+# Gli id dei campi sono anche i nomi con cui l'app precompila il modulo
+# (lib/feedback-source.js). Nessuno può chiamarsi `body`: è un nome riservato
+# di GitHub e su un modulo .yml viene buttato via in silenzio.
 body:
   - type: markdown
     attributes:
@@ -9,7 +12,7 @@ body:
         Se la apri dal pannello **📣 Segnalazioni** dentro l'app, versione e
         sistema arrivano già compilati.
   - type: textarea
-    id: body
+    id: descrizione
     attributes:
       label: Cosa succede
       description: Cosa ti aspettavi e cosa succede invece.
@@ -30,6 +33,6 @@ body:
     attributes:
       label: Versione e sistema
       description: La versione si legge in Help → Informazioni su PizzaManager.
-      placeholder: PizzaManager 1.4.0 · macOS · con tmux
+      placeholder: PizzaManager 1.5.0 · macOS · con tmux
     validations:
       required: false
